@@ -137,3 +137,39 @@ Ademas, se implementan algunas caracteristicas de Angular
 - Lazy load modules
 - Ngx-translate
 - Ngrx + effects
+
+## Testing
+
+- **TestBed**: Permite simular NgModule, crea un modulo de test. Entorno principal de pruebas. Configuración inicial
+
+```js
+TestBed.configureTestingModule({ imports: [] });
+```
+
+- **Fixture**: Representa una instancia de un componente envuelta con su entorno de prueba (plantilla, css, estado del componente)
+
+```js
+fixture = TestBed.createComponent(MyComponent);
+```
+
+- **Instance**: Representa la instancia especifica del componente, permite interactuar con sus metodos y propiedades
+
+```js
+fixture = TestBed.createComponent(MyComponent);
+component = fixture.componentInstance
+```
+
+- **debugElement**: Una abstracción que proporciona una API para interactuar con el DOM
+
+```js
+const debugElement: DebugElement = fixture.debugElement;
+const button = debugElement.query(By.css('button'));
+expect(button.nativeElement.textContent).toBe('Click me');
+```
+
+- **By.css**: es un selector que se utiliza para localizar elementos dentro de un DebugElement utilizando selectores CSS.
+
+```js
+const debugElement: DebugElement = fixture.debugElement;
+const button = debugElement.query(By.css('button'));
+```
