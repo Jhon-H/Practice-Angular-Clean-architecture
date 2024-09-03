@@ -23,8 +23,8 @@ import { userReducer } from '@/store/user/user.reducer';
 import { provideTranslation } from '@/core/config/translate-loader.config';
 import { importProvidersFrom } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { AuthGateway } from './shared/services/auth/auth.gateway';
-import { CognitoAuthService } from './shared/services/auth/cognito-auth.service';
+import { AuthGateway } from './core/providers/auth/auth.gateway';
+import { CognitoAuthService } from './core/providers/auth/cognito-auth.service';
 // import { CognitoAuthService } from './shared/services/auth/cognito-auth.service';
 
 export const appConfig: ApplicationConfig = {

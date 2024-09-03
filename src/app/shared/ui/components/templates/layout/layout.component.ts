@@ -1,4 +1,4 @@
-import { SeoService } from '@/shared/services/seo/seo.service';
+import { SeoService } from '@/core/providers/seo/seo.service';
 import { Component, inject, input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HeaderComponent } from '../../organisms/header/header.component';

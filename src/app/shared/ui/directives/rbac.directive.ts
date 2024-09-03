@@ -1,13 +1,6 @@
 import { Role } from '@/shared/domain/models/role.model';
-import { RbacService } from '@/shared/services/rbac/rbac.service';
-import {
-  Directive,
-  inject,
-  input,
-  OnInit,
-  TemplateRef,
-  ViewContainerRef,
-} from '@angular/core';
+import { RbacService } from '@/core/providers/rbac/rbac.service';
+import { Directive, inject, input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[appRbca]',
@@ -24,12 +17,10 @@ export class RbacDirective implements OnInit {
   ngOnInit() {
     this.viewContainer.clear();
 
-    this.rbacService
-      .isGranted([this.allowedRole()], this.user())
-      .subscribe(isGranted => {
-        if (isGranted) {
-          this.viewContainer.createEmbeddedView(this.templateRef);
-        }
-      });
+    this.rbacService.isGranted([this.allowedRole()], this.user()).subscribe(isGranted => {
+      if (isGranted) {
+        this.viewContainer.createEmbeddedView(this.templateRef);
+      }
+    });
   }
 }

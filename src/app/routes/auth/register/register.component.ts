@@ -1,5 +1,5 @@
 import { COMPLETE_ROUTES } from '@/shared/domain/routes';
-import { AuthGateway } from '@/shared/services/auth/auth.gateway';
+import { AuthGateway } from '@/core/providers/auth/auth.gateway';
 import { LayoutComponent } from '@/shared/ui/components/templates/layout/layout.component';
 import { AsyncPipe } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';

@@ -1,6 +1,6 @@
 import { COMPLETE_ROUTES } from '@/shared/domain/routes';
 import { RoleEnum } from '@/shared/domain/types';
-import { AuthFacade } from '@/shared/services/auth/auth.facade';
+import { AuthFacade } from '@/core/providers/auth/auth.facade';
 import { selectAuth } from '@/store/auth/auth.selectors';
 import { selectUser } from '@/store/user/user.selector';
 import { AsyncPipe } from '@angular/common';

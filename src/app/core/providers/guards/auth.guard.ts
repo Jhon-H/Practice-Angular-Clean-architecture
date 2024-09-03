@@ -1,6 +1,6 @@
 import { COMPLETE_ROUTES } from '@/shared/domain/routes';
 import { RoleEnum } from '@/shared/domain/types';
-import { RbacService } from '@/shared/services/rbac/rbac.service';
+import { RbacService } from '@/core/providers/rbac/rbac.service';
 import { inject } from '@angular/core';
 import { ActivatedRoute, CanActivateChildFn, Router } from '@angular/router';
 import { map, tap } from 'rxjs';
