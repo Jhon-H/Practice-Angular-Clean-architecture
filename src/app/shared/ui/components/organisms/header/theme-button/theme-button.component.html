@@ -1,0 +1,3 @@
+<button (click)="toogleTheme()" tuiButton size="xs">
+  {{ (currentTheme | async) === Theme.DARK ? 'Tema claro 🌻' : 'Tema oscuro 🌑' }}
+</button>

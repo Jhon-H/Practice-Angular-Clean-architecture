@@ -1,0 +1,5 @@
+@for (languaje of languajes; track languaje.id) {
+  <button (click)="changeLangue(languaje.id)" tuiButton size="xs">
+    {{ languaje.title }}
+  </button>
+}

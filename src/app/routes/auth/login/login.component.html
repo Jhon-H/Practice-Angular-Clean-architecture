@@ -1,0 +1,43 @@
+<app-layout [showLoginButton]="false">
+  <div class="container">
+    <form [formGroup]="authForm" (ngSubmit)="submit()">
+      <tui-input formControlName="username" [tuiTextfieldCleaner]="true">
+        Ingresa un username
+        <span class="tui-required"></span>
+        <input
+          autocomplete="username"
+          placeholder="jhonTest"
+          tuiTextfieldLegacy
+          type="text" />
+      </tui-input>
+
+      <tui-error formControlName="username" [error]="[] | tuiFieldError | async" />
+
+      <tui-input-password
+        formControlName="password"
+        class="tui-space_top-2"
+        [tuiTextfieldCleaner]="true">
+        Ingresa una contraseña
+        <span class="tui-required"></span>
+        <input placeholder="*********" tuiTextfieldLegacy />
+      </tui-input-password>
+
+      <tui-error
+        formControlName="password"
+        [error]="[] | tuiFieldError | async" />
+
+      <button
+        appearance="accent"
+        tuiButton
+        size="m"
+        [style.width]="'100%'"
+        [disabled]="isFormInvalid()">
+        Iniciar sesión
+      </button>
+
+      <tui-error [error]="computedError" />
+    </form>
+
+    <a [routerLink]="[registerPath]">¿Aún no tienes cuenta? Registrate</a>
+  </div>
+</app-layout>

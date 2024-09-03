@@ -1,0 +1,28 @@
+<header tuiNavigationHeader>
+  <tui-icon
+    icon="@tui.flame"
+    [style.color]="'var(--tui-text-negative)'"
+    [style.height.px]="25"
+    [style.width.px]="25"
+    tuiIconButton>
+    Menu
+  </tui-icon>
+
+  <nav [style]="{ marginLeft: '20px' }">
+    <tui-tabs tuiFade [underline]="false">
+      @for (headerLink of headerLinks; track headerLink.to) {
+        <button tuiTab [routerLink]="headerLink.to" [fragment]="headerLink.fragment" i18n>
+          {{ headerLink.title }}
+        </button>
+      }
+    </tui-tabs>
+  </nav>
+
+  <hr />
+
+  <app-theme-button />
+
+  <app-language-buttons />
+
+  <app-auth-button [showLoginButton]="showLoginButton()" />
+</header>

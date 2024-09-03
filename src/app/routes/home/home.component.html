@@ -1,0 +1,64 @@
+<app-layout>
+  <section class="container" id="start">
+    <div>
+      <h1 class="tui-text_h1 title">Organiza tus tareas y se más <span>productivo</span></h1>
+
+      <p class="tui-text_body-m-2">
+        Enim culpa aute do cupidatat excepteur officia exercitation ea non cupidatat consectetur non
+        magna fugiat. Consequat velit ut eu pariatur proident sint amet dolor. Velit occaecat in
+        occaecat exercitation eu.
+      </p>
+
+      <ng-template appRbca allowedRole="ADMIN">
+        <p>Eres ADMIN!</p>
+      </ng-template>
+
+      <p class="tui-text_body-m-2">{{ 'home.title' | translate: { name: (name | async) } }}</p>
+    </div>
+
+    <div>
+      <img ngSrc="/image.png" i18n-alt alt="principal" width="400" height="300" priority />
+    </div>
+
+    <div
+      class="tui-text_body-m-2"
+      [style]="{
+        backgroundColor: 'var(--color-background)',
+        color: 'var(--color-primary)',
+      }">
+      Probando dark Mode
+    </div>
+  </section>
+
+  <section class="container-2" id="install">
+    <code class="code">{{ downloadAppText }}</code>
+    <button tuiButton iconStart="@tui.copy" size="s" (click)="copyDownloadApp()">Copiar</button>
+
+    <tui-notification size="l">
+      Hello world
+      <button iconStart="@tui.x" tuiIconButton>Close</button>
+    </tui-notification>
+  </section>
+
+  <section class="container-3" id="testimonial">
+    <app-testimonial />
+  </section>
+
+  <section
+    class="container-3"
+    [style]="{ display: 'flex', columnGap: '50px', justifyContent: 'center' }">
+    <tui-thumbnail-card iconEnd="@tui.user" paymentSystem="visa" size="l" class="star">
+      1234
+    </tui-thumbnail-card>
+
+    <tui-thumbnail-card iconEnd="@tui.user" paymentSystem="mastercard" size="l" class="gradient">
+      5678
+    </tui-thumbnail-card>
+
+    <tui-thumbnail-card paymentSystem="maestro" size="l" class="retrowave">
+      9000
+    </tui-thumbnail-card>
+
+    <tui-thumbnail-card paymentSystem="amex" size="l" class="radial"> 7777 </tui-thumbnail-card>
+  </section>
+</app-layout>

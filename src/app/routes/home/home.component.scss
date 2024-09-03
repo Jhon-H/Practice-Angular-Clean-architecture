@@ -1,0 +1,35 @@
+.container {
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  align-items: center;
+}
+
+.title {
+  max-width: 70%;
+
+  span {
+    background-color: var(--tui-background-accent-2-hover);
+  }
+}
+
+.container-2 {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  max-width: 80%;
+  margin: 100px auto 0;
+}
+
+.code {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: var(--tui-background-neutral-1-pressed);
+}
+
+.container-3 {
+  max-width: 80%;
+  margin: 100px auto 0;
+}

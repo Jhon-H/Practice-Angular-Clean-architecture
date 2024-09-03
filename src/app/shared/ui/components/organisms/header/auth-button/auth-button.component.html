@@ -1,0 +1,9 @@
+@if (showAdminButton() | async) {
+  <button tuiButton appearance="secondary" (click)="redirectToAdmin()">Admin</button>
+}
+
+@if (!(isLoggedIn | async)) {
+  <button tuiButton appearance="secondary" (click)="redirectToLogin()">Iniciar sesión</button>
+} @else {
+  <button tuiButton appearance="secondary" (click)="handleSignout()">Cerrar sesión</button>
+}

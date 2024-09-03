@@ -1,0 +1,17 @@
+
+body {
+  --color-primary: #000;
+  --color-background: #fff;
+}
+
+body.dark {
+  --color-primary: pink;
+  --color-background: gray;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --color-primary: rgb(50, 49, 49);
+//     --color-background: rgb(105, 180, 255);
+//   }
+// }

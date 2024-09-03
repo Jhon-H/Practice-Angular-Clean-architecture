@@ -1,0 +1,13 @@
+<app-layout>
+  <h1>Esta sección es la de tareas</h1>
+
+  <div class="container">
+    @for (card of cards; track card.title) {
+      <a tuiButton appareance="contrast" [routerLink]="[getCardTo(card.id)]">
+        {{ card.title }}
+      </a>
+    }
+  </div>
+
+  <p>Data from resolver: {{ tasks | json }}</p>
+</app-layout>
