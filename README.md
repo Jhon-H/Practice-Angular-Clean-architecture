@@ -156,7 +156,7 @@ fixture = TestBed.createComponent(MyComponent);
 
 ```js
 fixture = TestBed.createComponent(MyComponent);
-component = fixture.componentInstance
+component = fixture.componentInstance;
 ```
 
 - **debugElement**: Una abstracción que proporciona una API para interactuar con el DOM
@@ -173,3 +173,8 @@ expect(button.nativeElement.textContent).toBe('Click me');
 const debugElement: DebugElement = fixture.debugElement;
 const button = debugElement.query(By.css('button'));
 ```
+
+## Graph
+
+`npm install -g @compodoc/ngd-cli`
+`ngd -p ./tsconfig.json`
